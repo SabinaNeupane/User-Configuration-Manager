@@ -1,7 +1,7 @@
 test_settings={
     "wifi":"on",
     "bluetooth":"off",
-    "mobile_data":"off"
+    "mobile data":"off"
 }
 
 def add_settings(user_settings,pair):
@@ -33,6 +33,23 @@ def delete_settings(user_settings,pair):
         return (f"Setting '[{key}]' deleted successfully!")
     else:
         return (f"Setting not found!")  
+
+def view_settings(user_settings):
+    if user_settings is {}:
+        return (f"No settings available.")
+    else:
+        output=""
+        for k,val in user_settings.items():
+            key=k.capitalize()
+            output=output+(f"{key}: {val} \n")
+        return (f'''Current User Settings:
+{output}''')
+            
+
+
+
+print(view_settings(test_settings))
+
 
 # print(add_settings(test_settings,("wifi","off")))
 # print(test_settings)
