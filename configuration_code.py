@@ -24,6 +24,15 @@ def update_settings(user_settings,pair):
     else:
         return (f"Setting '[{key}]' does not exist! Cannot update a non-existing setting.")      
 
+def delete_settings(user_settings,pair):
+    k,v=pair
+    key=k.lower()
+    val=v.lower()
+    if key in user_settings.keys():
+        user_settings.pop(key)
+        return (f"Setting '[{key}]' deleted successfully!")
+    else:
+        return (f"Setting not found!")  
 
 # print(add_settings(test_settings,("wifi","off")))
 # print(test_settings)
