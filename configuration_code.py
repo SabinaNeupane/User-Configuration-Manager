@@ -45,10 +45,11 @@ def view_settings(user_settings):
         return (f'''Current User Settings:
 {output}''')
             
+# print(delete_settings(test_settings,("wifi","off")))
+# print(test_settings)
 
 
-
-print(view_settings(test_settings))
+# print(view_settings(test_settings))
 
 
 # print(add_settings(test_settings,("wifi","off")))
